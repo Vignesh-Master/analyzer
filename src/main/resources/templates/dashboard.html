@@ -3,7 +3,7 @@
 <head><title>Dashboard</title></head>
 <body>
 <h1>Welcome to Your Dashboard</h1>
-<p th:text="'Hello, ' + (${#authentication?.getName()} ?: 'Guest') + '!'"></p>
+<p th:text="'Hello, ' + ${#authentication.name} + '!'"></p>
 <p>This is your personalized dashboard. More features coming soon!</p>
 <form method="post" th:action="@{/logout}">
   <button type="submit">Logout</button>
